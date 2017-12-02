@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        colorView.backgroundColor = .green
-        updateColcor()
+        updateColor()
         colorView.layer.borderWidth = 5
         colorView.layer.cornerRadius = 20
         colorView.layer.borderColor = UIColor.black.cgColor
@@ -37,10 +37,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var redSlider: UISlider!
     @IBAction func switchChanged(_ sender: UISwitch) {
-        updateColcor()
+        updateColor()
         updateControls()
     }
-    func updateColcor() {
+    func updateColor() {
         var red:CGFloat = 0
         var green:CGFloat = 0
         var blue:CGFloat = 0
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
-        updateColcor()
+       updateColor()
     }
    
     @IBAction func reset(_ sender: UIButton) {
