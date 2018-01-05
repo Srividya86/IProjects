@@ -16,6 +16,8 @@
 		9989463C1FB1024300EC2A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9989463A1FB1024300EC2A86 /* LaunchScreen.storyboard */; };
 		999409751FB51DBA00F28459 /* ColorMixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999409741FB51DBA00F28459 /* ColorMixTests.swift */; };
 		999409811FB5281300F28459 /* KIF+SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994097E1FB525DA00F28459 /* KIF+SwiftExtension.swift */; };
+		99A9500E1FD6172F003E3F5A /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A9500F1FD6172F003E3F5A /* FBSnapshotTestCase.framework */; };
+		99A950101FD6173A003E3F5A /* KIF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A950111FD6173A003E3F5A /* KIF.framework */; };
 		DE53DE8068620016EE374B72 /* Pods_ColorMixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279DBA8315C8BCC30FC12485 /* Pods_ColorMixTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		999409761FB51DBA00F28459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9994097C1FB5251E00F28459 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9994097E1FB525DA00F28459 /* KIF+SwiftExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KIF+SwiftExtension.swift"; sourceTree = "<group>"; };
+		99A9500F1FD6172F003E3F5A /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99A950111FD6173A003E3F5A /* KIF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KIF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C60401EC19C6915E0AC5B4 /* Pods-ColorMixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorMixTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ColorMixTests/Pods-ColorMixTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A950101FD6173A003E3F5A /* KIF.framework in Frameworks */,
+				99A9500E1FD6172F003E3F5A /* FBSnapshotTestCase.framework in Frameworks */,
 				DE53DE8068620016EE374B72 /* Pods_ColorMixTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +88,8 @@
 		7E3FA3B7F2F744A69D1BE7B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99A950111FD6173A003E3F5A /* KIF.framework */,
+				99A9500F1FD6172F003E3F5A /* FBSnapshotTestCase.framework */,
 				4A2F3325E0B0B1C5F89903F1 /* Pods_ColorMix.framework */,
 				279DBA8315C8BCC30FC12485 /* Pods_ColorMixTests.framework */,
 				3A33CD9D136703014F49D63E /* Pods_ColorMix_ColorMixTests.framework */,
@@ -134,6 +142,8 @@
 		999409731FB51DBA00F28459 /* ColorMixTests */ = {
 			isa = PBXGroup;
 			children = (
+				99A9500D1FD6155A003E3F5A /* FailureDiffs  */,
+				99A9500C1FD614DD003E3F5A /* ReferenceImages */,
 				9954BDE71FBA3A0F00DDF9D9 /* TestCases */,
 				9994097C1FB5251E00F28459 /* Bridging-Header.h */,
 				999409741FB51DBA00F28459 /* ColorMixTests.swift */,
@@ -141,6 +151,20 @@
 				999409761FB51DBA00F28459 /* Info.plist */,
 			);
 			path = ColorMixTests;
+			sourceTree = "<group>";
+		};
+		99A9500C1FD614DD003E3F5A /* ReferenceImages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReferenceImages;
+			sourceTree = "<group>";
+		};
+		99A9500D1FD6155A003E3F5A /* FailureDiffs  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "FailureDiffs ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,10 +309,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ColorMixTests/Pods-ColorMixTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
 				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

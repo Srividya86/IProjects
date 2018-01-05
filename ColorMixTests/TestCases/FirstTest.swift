@@ -10,6 +10,15 @@ import Foundation
 import XCTest
 import UIKit
 import KIF
+import FBSnapshotTestCase
+
+extension FBSnapshotTestCase {
+    
+    func verifyView(identifier element: String) {
+        FBSnapshotVerifyView(currentVC.view, identifier: "\(element)")
+    }
+}
+
 
 
 
